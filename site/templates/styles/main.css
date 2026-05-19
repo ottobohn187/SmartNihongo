@@ -73,7 +73,7 @@ img {
 	color: rgb(147 197 253);
 	font-size: 0.78rem;
 	font-weight: 900;
-	letter-spacing: 0.08em;
+	letter-spacing: 0;
 	text-transform: uppercase;
 }
 
@@ -100,5 +100,243 @@ img {
 
 	.feature-card h2 {
 		font-size: 1.9rem;
+	}
+}
+
+.trainer-shell,
+.login-practice-card {
+	border: 1px solid rgb(255 255 255 / 0.1);
+	border-radius: 1.5rem;
+	background: linear-gradient(145deg, rgb(7 18 38 / 0.96), rgb(8 30 68 / 0.84));
+	box-shadow: 0 24px 64px rgb(0 0 0 / 0.3);
+}
+
+.trainer-shell {
+	padding: 1rem;
+}
+
+.trainer-header,
+.login-practice-card {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.trainer-header {
+	padding: 0.5rem;
+}
+
+.trainer-header h2,
+.login-practice-card h2 {
+	margin: 0.35rem 0 0.5rem;
+	font-size: 1.9rem;
+	font-weight: 850;
+	line-height: 1.1;
+	color: white;
+}
+
+.trainer-header p,
+.login-practice-card p {
+	margin: 0;
+	max-width: 44rem;
+	color: rgb(203 213 225);
+	line-height: 1.7;
+}
+
+.trainer-grid {
+	display: grid;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.trainer-panel {
+	border: 1px solid rgb(255 255 255 / 0.1);
+	border-radius: 1rem;
+	background: rgb(2 6 23 / 0.62);
+	padding: 1rem;
+}
+
+.trainer-card-panel {
+	display: grid;
+	gap: 1rem;
+	justify-items: center;
+	text-align: center;
+}
+
+.trainer-mode {
+	margin: 0;
+	color: rgb(147 197 253);
+	font-weight: 850;
+}
+
+.trainer-card {
+	display: grid;
+	width: min(100%, 20rem);
+	min-height: 15rem;
+	place-items: center;
+	border: 1px solid rgb(147 197 253 / 0.28);
+	border-radius: 1rem;
+	background: radial-gradient(circle at 50% 22%, rgb(59 130 246 / 0.24), transparent 42%), rgb(7 18 38);
+	color: white;
+	cursor: pointer;
+}
+
+.trainer-card.is-correct {
+	border-color: rgb(74 222 128 / 0.8);
+}
+
+.trainer-card.is-wrong {
+	border-color: rgb(248 113 113 / 0.8);
+}
+
+.trainer-prompt {
+	font-family: "Yu Gothic", "Hiragino Sans", "Meiryo", ui-sans-serif, system-ui, sans-serif;
+	font-size: 5rem;
+	font-weight: 900;
+	line-height: 1;
+}
+
+.trainer-card-actions,
+.trainer-actions,
+.type-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+}
+
+.primary-action,
+.secondary-action,
+.choice-button {
+	border: 0;
+	border-radius: 0.85rem;
+	font-weight: 850;
+	cursor: pointer;
+}
+
+.primary-action {
+	background: linear-gradient(90deg, rgb(59 130 246), rgb(168 85 247));
+	color: white;
+	padding: 0.85rem 1.15rem;
+}
+
+.secondary-action {
+	border: 1px solid rgb(255 255 255 / 0.14);
+	background: rgb(255 255 255 / 0.08);
+	color: white;
+	padding: 0.8rem 1rem;
+}
+
+.choice-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0.75rem;
+}
+
+.choice-button {
+	min-height: 4.5rem;
+	background: rgb(255 255 255 / 0.08);
+	color: white;
+	font-size: 1.35rem;
+}
+
+.choice-button:hover,
+.secondary-action:hover {
+	background: rgb(255 255 255 / 0.14);
+}
+
+.choice-button.is-correct {
+	background: rgb(22 163 74 / 0.82);
+}
+
+.choice-button.is-wrong {
+	background: rgb(220 38 38 / 0.82);
+}
+
+.choice-button:disabled {
+	cursor: default;
+}
+
+.trainer-feedback {
+	min-height: 1.6rem;
+	margin: 0;
+	color: rgb(226 232 240);
+}
+
+.type-form {
+	display: grid;
+	gap: 0.85rem;
+}
+
+.type-form label,
+.stat-row span,
+.trainer-stats h3 {
+	color: rgb(203 213 225);
+	font-weight: 800;
+}
+
+.type-row input {
+	min-width: 0;
+	flex: 1 1 12rem;
+	border: 1px solid rgb(255 255 255 / 0.12);
+	border-radius: 0.85rem;
+	background: rgb(2 6 23 / 0.7);
+	color: white;
+	font-size: 1.15rem;
+	padding: 0.85rem 1rem;
+}
+
+.trainer-stats {
+	display: grid;
+	gap: 0.85rem;
+}
+
+.stat-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	border-bottom: 1px solid rgb(255 255 255 / 0.08);
+	padding-bottom: 0.75rem;
+}
+
+.stat-row strong {
+	color: white;
+	font-size: 1.25rem;
+}
+
+.trainer-stats h3 {
+	margin: 0 0 0.75rem;
+	font-size: 1rem;
+}
+
+.weak-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	color: rgb(148 163 184);
+}
+
+.weak-chip {
+	border: 1px solid rgb(147 197 253 / 0.22);
+	border-radius: 999px;
+	background: rgb(59 130 246 / 0.12);
+	color: rgb(219 234 254);
+	padding: 0.45rem 0.7rem;
+	font-weight: 850;
+}
+
+.login-practice-card {
+	padding: 1.5rem;
+}
+
+.hidden {
+	display: none !important;
+}
+
+@media (min-width: 900px) {
+	.trainer-grid {
+		grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) 18rem;
 	}
 }
