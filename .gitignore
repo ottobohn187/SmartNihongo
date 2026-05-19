@@ -1,0 +1,25 @@
+.DS_Store
+Thumbs.db
+
+# ProcessWire runtime and secrets live on the server.
+site/assets/
+site/config.php
+site/modules/
+wire/
+.well-known/
+cgi-bin/
+tmp/
+logs/
+
+# ProcessWire/cache noise.
+*.cache
+sess_*
+*.log
+error_log
+composer.lock
+
+# Local/editor files.
+.idea/
+.vscode/
+*.swp
+*.swo
