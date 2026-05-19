@@ -10,7 +10,7 @@
 			<img
 				src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&amp;fit=crop&amp;w=2000&amp;q=85"
 				alt=""
-				class="h-full w-full object-cover opacity-24"
+				class="h-full w-full object-cover opacity-25"
 			>
 			<div class="absolute inset-0 bg-[linear-gradient(110deg,rgba(2,6,23,0.96)_0%,rgba(8,31,68,0.9)_48%,rgba(88,42,142,0.78)_100%)]"></div>
 		</div>
@@ -32,7 +32,7 @@
 				</div>
 			</div>
 
-			<div class="rounded-3xl border border-white/12 bg-[#071226]/90 p-5 shadow-[0_24px_64px_rgba(0,0,0,0.35)] backdrop-blur">
+			<div class="rounded-3xl border border-white/10 bg-[#071226]/90 p-5 shadow-[0_24px_64px_rgba(0,0,0,0.35)] backdrop-blur">
 				<div class="grid grid-cols-3 gap-3 text-center">
 					<div class="kana-card">
 						<span class="kana-glyph">あ</span>
