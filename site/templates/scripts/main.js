@@ -11,7 +11,7 @@
 	}
 
 	const trainer = document.getElementById('sn-hiragana-trainer');
-	if (!trainer) return;
+	if (trainer) {
 
 	const HIRAGANA = [
 		['あ', 'a'], ['い', 'i'], ['う', 'u'], ['え', 'e'], ['お', 'o'],
@@ -299,4 +299,25 @@
 	});
 
 	loadServerProgress();
+	}
+
+	const lineButtons = document.querySelectorAll('[data-speak-text]');
+	lineButtons.forEach(function (button) {
+		button.addEventListener('click', function () {
+			const text = button.getAttribute('data-speak-text') || '';
+			if (!text) return;
+
+			if (!('speechSynthesis' in window)) {
+				button.textContent = 'No audio';
+				return;
+			}
+
+			const utterance = new SpeechSynthesisUtterance(text);
+			utterance.lang = 'ja-JP';
+			utterance.rate = 0.82;
+			utterance.pitch = 1;
+			window.speechSynthesis.cancel();
+			window.speechSynthesis.speak(utterance);
+		});
+	});
 })();

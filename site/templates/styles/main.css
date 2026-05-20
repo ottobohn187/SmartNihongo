@@ -340,3 +340,241 @@ img {
 		grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) 18rem;
 	}
 }
+
+.learning-page {
+	width: min(100%, 80rem);
+	margin: 0 auto;
+	padding: 2.5rem 1rem;
+}
+
+.page-hero {
+	margin-bottom: 1.5rem;
+	border-bottom: 1px solid rgb(255 255 255 / 0.1);
+	padding-bottom: 1.5rem;
+}
+
+.page-hero h1 {
+	margin: 0.35rem 0 0.75rem;
+	font-size: 2.5rem;
+	font-weight: 900;
+	line-height: 1.05;
+	color: white;
+}
+
+.page-hero p {
+	max-width: 48rem;
+	margin: 0;
+	color: rgb(203 213 225);
+	font-size: 1.1rem;
+	line-height: 1.7;
+}
+
+.learning-section {
+	margin-top: 1rem;
+}
+
+.learning-card-grid {
+	display: grid;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.restaurant-layout {
+	display: grid;
+	gap: 1rem;
+}
+
+.restaurant-scene {
+	position: relative;
+	min-height: 24rem;
+	overflow: hidden;
+	border: 1px solid rgb(255 255 255 / 0.1);
+	border-radius: 1.5rem;
+	background: linear-gradient(180deg, rgb(15 23 42), rgb(7 18 38) 55%, rgb(31 41 55));
+	box-shadow: 0 24px 64px rgb(0 0 0 / 0.28);
+}
+
+.restaurant-wall {
+	position: absolute;
+	inset: 0 0 42%;
+	background:
+		linear-gradient(90deg, rgb(255 255 255 / 0.05) 1px, transparent 1px) 0 0 / 4rem 4rem,
+		linear-gradient(rgb(255 255 255 / 0.04) 1px, transparent 1px) 0 0 / 4rem 4rem,
+		rgb(8 30 68);
+}
+
+.menu-board {
+	position: absolute;
+	top: 2rem;
+	left: 50%;
+	display: grid;
+	width: min(18rem, 70%);
+	transform: translateX(-50%);
+	border: 1px solid rgb(250 204 21 / 0.32);
+	border-radius: 1rem;
+	background: rgb(2 6 23 / 0.82);
+	padding: 1rem;
+	text-align: center;
+	color: rgb(254 240 138);
+}
+
+.menu-board span {
+	font-weight: 900;
+	font-size: 1.5rem;
+}
+
+.menu-board small {
+	margin-top: 0.3rem;
+	color: rgb(226 232 240);
+	font-weight: 800;
+}
+
+.restaurant-counter {
+	position: absolute;
+	right: -2rem;
+	bottom: 5.5rem;
+	left: -2rem;
+	height: 5rem;
+	border-top: 1px solid rgb(255 255 255 / 0.16);
+	background: linear-gradient(180deg, rgb(148 163 184), rgb(71 85 105));
+}
+
+.restaurant-person {
+	position: absolute;
+	bottom: 5.9rem;
+	display: grid;
+	justify-items: center;
+	gap: 0.25rem;
+	color: white;
+	font-weight: 900;
+}
+
+.restaurant-person.server {
+	left: 18%;
+}
+
+.restaurant-person.guest {
+	right: 16%;
+}
+
+.person-head {
+	width: 3.8rem;
+	height: 3.8rem;
+	border-radius: 999px;
+	background: rgb(254 205 170);
+	box-shadow: inset 0 -0.35rem 0 rgb(194 65 12 / 0.18);
+}
+
+.person-body {
+	width: 5rem;
+	height: 5.6rem;
+	border-radius: 1.4rem 1.4rem 0.5rem 0.5rem;
+	background: linear-gradient(135deg, rgb(59 130 246), rgb(168 85 247));
+}
+
+.guest .person-body {
+	background: linear-gradient(135deg, rgb(20 184 166), rgb(59 130 246));
+}
+
+.speech-bubble {
+	position: absolute;
+	max-width: 13rem;
+	border: 1px solid rgb(255 255 255 / 0.14);
+	border-radius: 1rem;
+	background: rgb(255 255 255 / 0.9);
+	padding: 0.85rem 1rem;
+	color: rgb(15 23 42);
+	font-weight: 900;
+	box-shadow: 0 14px 30px rgb(0 0 0 / 0.22);
+}
+
+.server-bubble {
+	top: 8.5rem;
+	left: 7%;
+}
+
+.guest-bubble {
+	right: 6%;
+	bottom: 13.2rem;
+}
+
+.dialogue-panel {
+	display: grid;
+	gap: 0.75rem;
+	border: 1px solid rgb(255 255 255 / 0.1);
+	border-radius: 1.5rem;
+	background: rgb(7 18 38 / 0.88);
+	padding: 1rem;
+	box-shadow: 0 20px 48px rgb(0 0 0 / 0.24);
+}
+
+.dialogue-line {
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	gap: 0.9rem;
+	align-items: start;
+	border-bottom: 1px solid rgb(255 255 255 / 0.08);
+	padding-bottom: 0.75rem;
+}
+
+.dialogue-line:last-child {
+	border-bottom: 0;
+	padding-bottom: 0;
+}
+
+.line-play {
+	border: 0;
+	border-radius: 0.85rem;
+	background: linear-gradient(90deg, rgb(59 130 246), rgb(168 85 247));
+	color: white;
+	cursor: pointer;
+	font-weight: 850;
+	padding: 0.75rem 0.9rem;
+}
+
+.speaker,
+.japanese-line,
+.romaji-line,
+.english-line {
+	margin: 0;
+}
+
+.speaker {
+	color: rgb(147 197 253);
+	font-size: 0.85rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.japanese-line {
+	margin-top: 0.15rem;
+	color: white;
+	font-size: 1.35rem;
+	font-weight: 900;
+}
+
+.romaji-line {
+	margin-top: 0.25rem;
+	color: rgb(203 213 225);
+	font-weight: 800;
+}
+
+.english-line {
+	margin-top: 0.15rem;
+	color: rgb(148 163 184);
+}
+
+@media (min-width: 900px) {
+	.page-hero h1 {
+		font-size: 3.6rem;
+	}
+
+	.learning-card-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.restaurant-layout {
+		grid-template-columns: minmax(0, 1.15fr) minmax(24rem, 0.85fr);
+		align-items: stretch;
+	}
+}
