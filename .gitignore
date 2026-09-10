@@ -4,6 +4,7 @@ Thumbs.db
 # ProcessWire runtime and secrets live on the server.
 site/assets/
 site/config.php
+web/private-config.php
 site/modules/
 wire/
 .well-known/
